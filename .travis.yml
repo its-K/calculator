@@ -30,6 +30,7 @@ jobs:
   #         - "python3-pip"
   #         - "python3-setuptools"
    - os: osx
+     compiler: clang
 
 script:
   - mkdir build && cd build
