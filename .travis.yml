@@ -29,9 +29,7 @@ jobs:
           - "python3"
           - "python3-pip"
           - "python3-setuptools"
-  #  - os: osx
-  #    script:
-  #     - ls
+   - os: osx
 
 script:
   - mkdir build && cd build
