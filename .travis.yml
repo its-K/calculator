@@ -12,23 +12,23 @@ before_script:
   - source ~/.profile
 jobs:
   include:
-   - os: linux
-     arch: amd64
-     addons:
-      apt:
-        packages:
-          - "python3"
-          - "python3-pip"
-          - "python3-setuptools"
-   - os: linux
-     arch: arm64
-     dist: trusty
-     addons:
-      apt:
-        packages:
-          - "python3"
-          - "python3-pip"
-          - "python3-setuptools"
+  #  - os: linux
+  #    arch: amd64
+  #    addons:
+  #     apt:
+  #       packages:
+  #         - "python3"
+  #         - "python3-pip"
+  #         - "python3-setuptools"
+  #  - os: linux
+  #    arch: arm64
+  #    dist: trusty
+  #    addons:
+  #     apt:
+  #       packages:
+  #         - "python3"
+  #         - "python3-pip"
+  #         - "python3-setuptools"
    - os: osx
 
 script:

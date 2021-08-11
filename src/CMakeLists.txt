@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
-SET(CMAKE_CXX_FLAGS "-std=c++11 -O3")
+if("${CMAKE_SYSTEM_NAME}" STREQUAL "Linux")
+    SET(CMAKE_CXX_FLAGS "-std=c++11 -O3")
+endif()
 project(op)
 
 
