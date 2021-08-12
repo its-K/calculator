@@ -31,7 +31,9 @@ jobs:
   #  - os: osx
   #    compiler: clang
      - os: windows
-       install: choco install python3 --pre
+       install: 
+        - choco install python3 --pre
+        - python3 get-pip.py
 
 script:
   - mkdir build && cd build
