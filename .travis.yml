@@ -33,8 +33,8 @@ jobs:
      - os: windows
        install: 
         - choco install python3 --pre
-        - refreshenv
         - python3 -V
+        - python3 -m ensurepip
 
 script:
   - mkdir build && cd build
