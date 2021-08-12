@@ -8,7 +8,6 @@ compiler:
 before_script:
   - pip3 install cmake
   - pip3 install conan
-  - if [ NOT "$TRAVIS_OS_NAME" = "windows" ]; then source ~/.profile && echo "This is Linux/Macos"; fi
 jobs:
   include:
    - os: linux
@@ -35,9 +34,13 @@ jobs:
      install:
      - choco install python --version=3.8.2
      - python -m pip install -U pip setuptools
+     script: 
+     - mkdir build && cd build
+     - conan install ../ --build missing --profile ../win_profile && conan build ../
+     - bin/./op
 
 script:
+  - source ~/.profile
   - mkdir build && cd build
-  - if [ NOT "$TRAVIS_OS_NAME" = "windows" ]; then conan install ../ --build missing && conan build ../ ; fi
-  - if [ "$TRAVIS_OS_NAME" = "windows" ]; then conan install ../ --build missing --profile ../win_profile && conan build ../ ; fi
+  - conan install ../ --build missing && conan build ../
   - bin/./op
