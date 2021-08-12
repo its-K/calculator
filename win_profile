@@ -1,0 +1,13 @@
+[settings]
+os=Windows
+os_build=Windows
+arch=x86_64
+arch_build=x86_64
+compiler=gcc
+compiler.version=8
+compiler.libcxx=libstdc++
+build_type=Release
+
+[env]
+CC=C:/ProgramData/chocolatey/bin/gcc
+CXX=C:/ProgramData/chocolatey/bin/g++
