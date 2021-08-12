@@ -15,6 +15,7 @@
 #include <string>
 
 using namespace rapidjson;
+using namespace boost::gregorian;
 
 int main(int argc, char const *argv[])
 {
