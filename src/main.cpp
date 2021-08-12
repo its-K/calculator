@@ -11,11 +11,8 @@
 #include "rapidjson/writer.h"
 #include "rapidjson/stringbuffer.h"
 #include <fmt/core.h>
-#include "boost/date_time/gregorian/gregorian.hpp"
-#include <string>
 
 using namespace rapidjson;
-using namespace boost::gregorian;
 
 int main(int argc, char const *argv[])
 {
@@ -89,15 +86,6 @@ int main(int argc, char const *argv[])
     // Output {"project":"rapidjson","stars":11}
     std::cout << buffer.GetString() << std::endl;
 
-    fmt::print("Date\n");
-    try {
-    std::string si("2001-10-9"); //2001-October-09
-    date d(from_simple_string(si));
-    std::cout << to_simple_string(d) << std::endl;
-    }
-    catch(std::exception& e) {
-      std::cout << "  Exception: " <<  e.what() << std::endl;
-    }
 
     return 0;
 }
